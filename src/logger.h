@@ -6,7 +6,7 @@
     This program is used to print coloured output.
     Generally used for logging
 */
-
+#pragma once
 #include <stdio.h>
 
 #define KNRM  "\x1B[0m"
@@ -18,6 +18,9 @@
 #define KCYN  "\x1B[36m"
 #define KWHT  "\x1B[37m"
 #define RESET "\033[0m"
+
+#define SERVER 1
+#define CLIENT 2
 /*
  * The colours are used as shown below.
     int main()
@@ -38,15 +41,15 @@
 
 void warning(char *s)
 {
-    printf(YELLOW "%s\n" RESET, s);
+       printf(YELLOW "%s\n" RESET, s);
 }
 
 void alert(char *s)
 {
-    printf(RED "%s\n" RESET, s);
+       printf(RED "%s\n" RESET, s);
 }
 
 void success(char *s)
 {
-    printf(GREEN "%s\n" RESET, s);
+       printf(GREEN "%s\n" RESET, s);
 }
